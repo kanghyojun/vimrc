@@ -1,5 +1,9 @@
 # My vim configuration.
 
+## installation
+
+    $ make install
+
 ## Plugins
 
  - [Auto complete popup][acp]

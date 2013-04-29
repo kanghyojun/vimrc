@@ -1,6 +1,13 @@
-install: copy download clean
+all: install clean
+
+install: leave_orig copy download
 
 download: mk_vim_dir download_syntax download_plugins
+	rm -rf $$HOME/.vim/vim_plugins
+
+leave_orig:
+	cp $$HOME/.vimrc $$HOME/.vimrc.orig
+	cp -r $$HOME/.vim $$HOME/.vim.orig
 
 mk_vim_dir:
 	mkdir -p $$HOME/.vim/autoload/; \
@@ -48,4 +55,5 @@ copy:
 	cp vimrc $$HOME/.vimrc
 
 clean:
-	rm -rf $$HOME/.vim/vim_plugins
+	rm -rf $$HOME/.vimrc
+	rm -rf $$HOME/.vim

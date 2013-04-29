@@ -2,7 +2,14 @@
 
 ## installation
 
+    $ make all
+
+if you want to save your configuration,
+
     $ make install
+
+will copy your `.vim`, `.vimrc` into `.vim.orig`, `.vimrc.orig`.
+`make clean` remove `orig`.
 
 ## Plugins
 

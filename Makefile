@@ -6,8 +6,8 @@ download: mk_vim_dir download_syntax download_plugins
 	rm -rf $$HOME/.vim/vim_plugins
 
 leave_orig:
-	cp $$HOME/.vimrc $$HOME/.vimrc.orig
-	cp -r $$HOME/.vim $$HOME/.vim.orig
+	if test -s $$HOME/.vimrc; then cp $$HOME/.vimrc $$HOME/.vimrc.orig; echo "Copy .vimrc into .vimrc.orig"; fi; \
+	if test -d $$HOME/.vim; then cp -r $$HOME/.vim $$HOME/.vim.orig; echo "Copy .vim into .vim.orig"; fi
 
 mk_vim_dir:
 	mkdir -p $$HOME/.vim/autoload/; \

@@ -3,9 +3,9 @@ all: install
 install: leave_orig setup install_vundle copy build_vundle 
 
 leave_orig:
-	if test -s $$HOME/.vimrc; then cp $$HOME/.vimrc $$HOME/.vimrc.orig; echo "Copy .vimrc into .vimrc.orig"; fi; \
-	if test -s $$HOME/.gvimrc; then cp $$HOME/.vimrc $$HOME/.gvimrc.orig; echo "Copy .gvimrc into .gvimrc.orig"; fi; \
-	if test -d $$HOME/.vim; then cp -r $$HOME/.vim $$HOME/.vim.orig; echo "Copy .vim into .vim.orig"; fi
+	if test -s $$HOME/.vimrc; then cp $$HOME/.vimrc $$HOME/.vimrc.orig; echo -e "\033[0;31mCopy .vimrc into .vimrc.orig\e[0m\"; fi; \
+	if test -s $$HOME/.gvimrc; then cp $$HOME/.vimrc $$HOME/.gvimrc.orig; echo -e "\033[0;31mCopy .gvimrc into .gvimrc.orig\e[0m\"; fi; \
+	if test -d $$HOME/.vim; then cp -r $$HOME/.vim $$HOME/.vim.orig; echo -e "\033[0;31mCopy .vim into .vim.orig\e[0m\"; fi
 
 setup:
 	rm -rf $$HOME/.vimrc

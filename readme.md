@@ -2,28 +2,32 @@
 
 ## installation
 
-    $ make all
+    $ make
 
-if you want to save your configuration,
-
-    $ make install
-
-will copy your `.vim`, `.vimrc` into `.vim.orig`, `.vimrc.orig`.
-`make clean` remove `orig`.
+if you have .vimrc on your $HOME, `MakeFile` leave `.orig` files.
 
 ## Plugins
 
+ - [Vundle][vundle]
  - [Auto complete popup][acp]
  - [Auto close][autoclose]
+ - [gundo][gundo]
+ - [FuzzyFinder][FuzzyFinder]
+ - [HTML-AutoCloseTag][autoclose]
+ - [fugitive][fugitive]
+ - [powerline][powerline]
 
 ## Syntax
 
- - [Scala][scala]
- - [LESS][less]
- - [HTML5][html5]
+ - [Jinja][Jinja]
+ 
 
+[gundo]: https://github.com/sjl/gundo.vim
+[vundle]: https://github.com/gmarik/vundle
 [acp]: https://github.com/vim-scripts/AutoComplPop
 [autoclose]: https://github.com/Townk/vim-autoclose/
-[scala]: https://github.com/scala/scala-dist/tree/master/tool-support/src/vim
-[LESS]: http://leafo.net/lessphp/vim/less.vim 
-[html5]: https://gist.github.com/raw/256840/html5.vim
+[FuzzyFinder]: https://github.com/vim-scripts/FuzzyFinder
+[Jinja]: https://github.com/vim-scripts/Jinja
+[autoclose]: https://github.com/vim-scripts/HTML-AutoCloseTag
+[fugitive]: https://github.com/tpope/vim-fugitive
+[powerline]: https://github.com/Lokaltog/vim-powerline

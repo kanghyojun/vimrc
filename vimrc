@@ -12,15 +12,13 @@ Bundle 'gmarik/vundle'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'AutoComplPop'
-Bundle 'Jinja'
-Bundle 'HTML-AutoCloseTag'
 Bundle 'Solarized'
 
 " git repo
 Bundle 'sjl/gundo.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -51,3 +49,5 @@ set laststatus=2
 
 map tt :FufFile<CR>
 nnoremap <F5> :GundoToggle<CR>
+
+let g:airline_powerline_fonts=1

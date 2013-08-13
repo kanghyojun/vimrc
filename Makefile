@@ -1,11 +1,11 @@
 all: install
 
-install: leave_orig setup install_vundle copy build_vundle 
+install: leave_orig setup install_vundle copy build_vundle install_powerline_font
 
 leave_orig:
-	if test -s $$HOME/.vimrc; then cp $$HOME/.vimrc $$HOME/.vimrc.orig; echo -e "\033[0;31mCopy .vimrc into .vimrc.orig\e[0m\"; fi; \
-	if test -s $$HOME/.gvimrc; then cp $$HOME/.vimrc $$HOME/.gvimrc.orig; echo -e "\033[0;31mCopy .gvimrc into .gvimrc.orig\e[0m\"; fi; \
-	if test -d $$HOME/.vim; then cp -r $$HOME/.vim $$HOME/.vim.orig; echo -e "\033[0;31mCopy .vim into .vim.orig\e[0m\"; fi
+	if test -s $$HOME/.vimrc; then cp $$HOME/.vimrc $$HOME/.vimrc.orig; fi; \
+	if test -s $$HOME/.gvimrc; then cp $$HOME/.vimrc $$HOME/.gvimrc.orig; fi; \
+	if test -d $$HOME/.vim; then cp -r $$HOME/.vim $$HOME/.vim.orig; fi;
 
 setup:
 	rm -rf $$HOME/.vimrc
@@ -24,3 +24,6 @@ install_vundle:
 
 build_vundle:
 	vim +BundleInstall +qall
+
+install_powerline_font:
+	wget https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf -o $$HOME/Library/Fonts/Inconsolata\ For\ Powerline.otf

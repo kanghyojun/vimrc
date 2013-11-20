@@ -50,6 +50,7 @@ set laststatus=2
 
 map tt :FufFile<CR>
 nnoremap <F5> :GundoToggle<CR>
+vnoremap <F7> "zy:Ack <C-r>z .<CR>
 
 let g:airline_powerline_fonts=1
 

@@ -19,6 +19,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on
 

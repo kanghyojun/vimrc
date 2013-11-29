@@ -52,15 +52,18 @@ map tt :FufFile<CR>
 nnoremap <F5> :GundoToggle<CR>
 vnoremap <F7> "zy:Ack <C-r>z .<CR>
 
+set noeb vb t_vb=
+autocmd GUIEnter * set vb t_vb=
+
 let g:airline_powerline_fonts=1
 
 " Commenting blocks of code.
-autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab       let b:comment_leader = '# '
-autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail             let b:comment_leader = '> '
-autocmd FileType vim              let b:comment_leader = '" '
-autocmd Filetype sql              let b:comment_leader = '-- '
+autocmd FileType c,cpp,java,scala,javascript  let b:comment_leader = '// '
+autocmd FileType sh,ruby,python               let b:comment_leader = '# '
+autocmd FileType conf,fstab                   let b:comment_leader = '# '
+autocmd FileType tex                          let b:comment_leader = '% '
+autocmd FileType mail                         let b:comment_leader = '> '
+autocmd FileType vim                          let b:comment_leader = '" '
+autocmd Filetype sql                          let b:comment_leader = '-- '
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>

@@ -13,3 +13,8 @@ set bg=light
 colorscheme solarized
 
 let g:airline_theme='solarized'
+
+
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd WinEnter * match ExtraWhitespace /\s\+\%#\@<!$/

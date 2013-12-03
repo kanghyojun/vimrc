@@ -2,9 +2,9 @@
 
 ## installation
 
-    $ make
+    $ sh install.sh
 
-if you have .vimrc on your $HOME, `MakeFile` leave `.orig` files.
+if you have .vimrc on your $HOME, it moved to `$HOME/vimrc.old`
 
 ## Plugins
 

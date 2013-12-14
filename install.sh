@@ -25,6 +25,10 @@ ln -s "$(pwd)/vimrc" "$HOME/.vimrc"
 mkdir -p "$HOME/.vim"
 mkdir -p "$HOME/.vim/bundle"
 mkdir -p "$HOME/.vim/bundle/vundle"
-git clone https://github.com/gmarik/vundle.git "$HOME/.vim/bundle/vundle"
+
+if [ ! -e "$HOME/.vim/bundle/vundle/.git" ];
+then
+  git clone https://github.com/gmarik/vundle.git "$HOME/.vim/bundle/vundle"
+fi
 
 vim +BundleInstall +qall

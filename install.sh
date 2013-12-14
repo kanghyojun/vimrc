@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo $1
-
 vimrc="$HOME/.vimrc"
 gvimrc="$HOME/.gvimrc"
 old="$HOME/vimrc.old"

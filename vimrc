@@ -20,6 +20,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'mileszs/ack.vim'
+Bundle 'junegunn/seoul256.vim'
 
 filetype plugin indent on
 

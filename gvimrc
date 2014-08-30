@@ -6,9 +6,8 @@ set go-=L
 set colorcolumn=80
 
 set bg=dark
-colorscheme solarized
+colorscheme seoul256
 
-let g:airline_theme='solarized'
 
 "Keep 80 columns.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929

@@ -21,6 +21,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'mileszs/ack.vim'
 Bundle 'junegunn/seoul256.vim'
+Bundle 'vim-scripts/haskell.vim'
 
 filetype plugin indent on
 
@@ -41,6 +42,7 @@ au FileType php         setl ts=2 sw=2 sts=2
 au FileType sql         setl ts=2 sw=2 sts=2
 au FileType javascript  setl ts=2 sw=2 sts=2
 au FileType python      setl ts=4 sw=4 sts=4
+au FileType haskell     setl ts=8 sw=4 sts=4
 
 "Keep 80 columns.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -77,3 +79,6 @@ autocmd FileType vim                          let b:comment_leader = '" '
 autocmd Filetype sql                          let b:comment_leader = '-- '
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+autocmd FileType haskell                      let b:compile_run='ghc % && ./%<'
+noremap <silent> ,r :! <C-R>=b:compile_run<CR><CR>

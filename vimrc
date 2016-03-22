@@ -21,7 +21,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'mileszs/ack.vim'
 Bundle 'junegunn/seoul256.vim'
-Bundle 'vim-scripts/haskell.vim'
+Bundle "lepture/vim-jinja"
+Bundle 'raichoo/haskell-vim'
+Bundle 'Wutzara/vim-materialtheme'
+Bundle 'rhysd/committia.vim'
+Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
 
@@ -43,6 +47,8 @@ au FileType sql         setl ts=2 sw=2 sts=2
 au FileType javascript  setl ts=2 sw=2 sts=2
 au FileType python      setl ts=4 sw=4 sts=4
 au FileType haskell     setl ts=8 sw=4 sts=4
+
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
 
 "Keep 80 columns.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -82,3 +88,5 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 
 autocmd FileType haskell                      let b:compile_run='ghc % && ./%<'
 noremap <silent> ,r :! <C-R>=b:compile_run<CR><CR>
+set directory=/tmp
+set colorcolumn=80
